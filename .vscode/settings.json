@@ -1,0 +1,10 @@
+{
+    "python.pythonPath": "C:\\Users\\alvin\\.virtualenvs\\django-projeto-altaperformance-2XeK_eFd\\Scripts\\python.exe",
+    "python.testing.pytestArgs": [
+        "--ds=AmorFati.settings"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.nosetestsEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "python.envFile": "${workspaceFolder}/.env"
+}
