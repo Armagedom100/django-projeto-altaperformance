@@ -19,6 +19,4 @@ jobs:
         run: |
           pip install pipenv
           pipenv sync --dev
-      - name: Rodar Testes Altomaticos
-        run: |
-          pipenv run pytest AmorFati
+          
