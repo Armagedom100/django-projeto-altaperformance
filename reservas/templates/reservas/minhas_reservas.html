@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Minhas Reservas</title>
+</head>
+<body>
+    <h1>Minhas Reservas</h1>
+    <ul>
+        {% for reserva in reservas %}
+            <li>{{ reserva.data }} {{ reserva.hora }} - {{ reserva.numero_pessoas }} pessoas</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
