@@ -14,13 +14,23 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
+# AmorFati/urls.py
+
 from django.contrib import admin
 from django.urls import path, include
-from AmorFati.home_view import home
-
+from . import views
+from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', home,),
-    path('sitedelivery/', include('AmorFati.sitedelivery.urls')),
+    path('', views.index, name='index'),
+    path('cardapio/', views.cardapio, name='cardapio'),
+    path('booking/', views.booking, name='booking'),
+    path('reservas/', include('reservas.urls')),
+    path('accounts/', include('django.contrib.auth.urls')),
+    path('accounts/logout/', auth_views.LogoutView.as_view(), name='logout'),
+    path('accounts/logout/', auth_views.LogoutView.as_view(next_page='login'), name='logout'),
+    path('register/', views.register, name='register'),
 ]
+
